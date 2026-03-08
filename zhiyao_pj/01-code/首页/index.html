@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>制药工程 - 主页</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="index-page">
+  <!-- 左侧圆形导航：对应 5 个大卡片 -->
+  <nav class="index-section-nav">
+    <a href="#section1" class="index-nav-btn" title="开篇引入" aria-label="开篇引入">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="14" rx="6" ry="4"/><path d="M6 14c0-2 2.5-4 6-4s6 2 6 4"/></svg>
+    </a>
+    <a href="#section2" class="index-nav-btn" title="科学背景" aria-label="科学背景">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4a8 8 0 0 1 8 8"/><path d="M12 4a8 8 0 0 0-8 8"/><path d="M4 12h16"/><circle cx="12" cy="12" r="2"/></svg>
+    </a>
+    <a href="#section3" class="index-nav-btn" title="传统方案痛点" aria-label="传统方案痛点">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    </a>
+    <a href="#section4" class="index-nav-btn" title="产品方案" aria-label="产品方案">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M12 14v2"/></svg>
+    </a>
+    <a href="#section5" class="index-nav-btn" title="愿景升华" aria-label="愿景升华">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </a>
+  </nav>
+
+  <div class="back-to-top-wrapper" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <img src="https://pic1.imgdb.cn/item/69ad4a2ef69caa32802aac78.png" alt="回到顶部" class="back-to-top" />
+    <div class="tooltip">回到顶部</div>
+  </div>
+
+  <div class="page-background"></div>
+  <div class="menu-area">
+    <a href="../首页/index.html" class="logo-link">
+      <img src="https://pic1.imgdb.cn/item/69ad4a46f69caa32802aac7f.png" alt="Logo" class="logo-img" />
+    </a>
+    <div class="btn-container nav-menu">
+      <button class="btn home-btn nav-active" onclick="window.location.href='../首页/index.html'">首页 <i class="fas fa-home"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../项目介绍/description.html'">项目介绍 <i class="fas fa-book"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../项目设计/engineering.html'">项目设计 <i class="fas fa-cog"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../线路与元件/result.html'">线路与元件 <i class="fas fa-project-diagram"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../实验设计/experiment.html'">实验设计 <i class="fas fa-flask"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../人类实践/hp.html'">人类实践 <i class="fas fa-earth-asia"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../建模/model.html'">建模 <i class="fas fa-chart-line"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../成员介绍/personal.html'">成员介绍 <i class="fas fa-user"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../联系我们/contact.html'">联系我们 <i class="fas fa-envelope"></i></button>
+    </div>
+  </div>
+
+  <!-- 封面图：PPT 第一页（案件档案）作为网站封面 -->
+  <section class="index-cover">
+    <img src="https://pic1.imgdb.cn/item/69ad49ddf69caa32802aac67.png" alt="口-脑轴侦探调查：拦截阿尔茨海默病" class="index-cover-img" />
+    <div class="index-cover-scroll-hint">
+      向下滚动 <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <div class="hero-section">
+    <div class="main-title index-main-title">MediSyn</div>
+    <div class="scroll-hint">
+      向下滚动 了解更多
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </div>
+
+  <div class="content-area">
+    <div class="main-content">
+      <!-- 板块1：开篇引入 -->
+      <div id="section1" class="text-content-section index-text-section">
+        <div class="text-box-container">
+          <div class="section-title">记忆消逝的开端，藏在你的口腔里</div>
+          <div class="text-content">
+            随着全球老龄化进程加速、生活压力增大以及口腔卫生意识的滞后，阿尔茨海默病（AD）的阴影正悄无声息地笼罩着越来越多的家庭。许多人未曾留意，那看似寻常的牙龈出血或牙菌斑，不仅是口腔卫生的问题，更是记忆消逝的开端。这不仅关乎个人的尊严与生活质量，更给家庭和社会带来了沉重的照护负担。我们迫切需要从源头截断病程，以一种更日常、更早期的方式应对这一"无声的流行病"。
+          </div>
+          <div class="index-section-images">
+            <img src="https://pic1.imgdb.cn/item/69ad4a80f69caa32802aac99.png" alt="张开的嘴示意图" class="index-section-img" />
+            <img src="https://pic1.imgdb.cn/item/69ad4a80f69caa32802aac9a.png" alt="牙周病示意图" class="index-section-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 板块2：科学背景 -->
+      <div id="section2" class="text-content-section index-text-section">
+        <div class="text-box-container">
+          <div class="section-title">口-脑轴：潜伏在牙龈里的记忆杀手</div>
+          <div class="text-content">
+            世界卫生组织长期强调口腔健康是全身健康的一面镜子，它不仅支撑着进食与交流的基本功能，更是维系自信与社会参与的关键。而最新的科学研究揭示了更深层的危机——"口-脑轴（Oral-Brain Axis）"。口腔中的牙龈卟啉单胞菌（Pg）不再局限于牙龈，它们能构建顽固的生物膜，释放毒素穿透血脑屏障，成为潜伏在大脑深处的记忆杀手。
+          </div>
+          <div class="index-section-images index-section-images-4">
+            <img src="https://pic1.imgdb.cn/item/69ad4a80f69caa32802aac98.png" alt="牙齿上的牙菌斑示意图" class="index-section-img" />
+            <img src="https://pic1.imgdb.cn/item/69ad4a80f69caa32802aac9b.png" alt="生物膜形成示意图" class="index-section-img" />
+            <img src="https://pic1.imgdb.cn/item/69ad4a80f69caa32802aac9c.png" alt="大脑示意图" class="index-section-img" />
+            <img src="https://pic1.imgdb.cn/item/69ad4a80f69caa32802aac9d.png" alt="血脑屏障穿透示意图" class="index-section-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 板块3：传统方案痛点 -->
+      <div id="section3" class="text-content-section index-text-section">
+        <div class="text-box-container">
+          <div class="section-title">传统防线，为何不堪一击？</div>
+          <div class="text-content">
+            然而，面对这一跨越器官的入侵，传统手段捉襟见肘。常用的抗生素难以穿透细菌构建的生物膜"堡垒"，且极易破坏肠道微生态平衡；而针对大脑病变的药物往往介入过晚，难以逆转已经发生的神经损伤。
+          </div>
+          <div class="index-section-images">
+            <img src="https://pic1.imgdb.cn/item/69ad4a8bf69caa32802aac9f.png" alt="Solution/Attention 警示框" class="index-section-img" />
+            <img src="https://pic1.imgdb.cn/item/69ad4a8bf69caa32802aaca0.png" alt="拄助行器的老人剪影图" class="index-section-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 板块4：产品方案 -->
+      <div id="section4" class="text-content-section index-text-section">
+        <div class="text-box-container">
+          <div class="section-title">MediSyn：刷牙，就是一场精准的防御战</div>
+          <div class="text-content">
+            因此，我们设计了 MediSyn，一款通过工程化益生菌实现牙周生物膜瓦解、病原体清除与毒素阻断的生物牙膏。在用户日常刷牙的过程中，产品中的工程菌EcN会在牙周袋的缺氧环境下被激活。它首先分泌 DspB 和 DNase I，像"拆弹部队"一样瓦解生物膜的糖衣和DNA网格，暴露病原体；随后释放 Cas9，"精准狙击"病原体Pg的基因组，从根源杀灭细菌；最后，分泌 Cystatin C 作为"护盾"，中和残留毒素，防止其穿透血脑屏障。
+          </div>
+          <div class="index-section-images">
+            <img src="https://pic1.imgdb.cn/item/69ad4a8bf69caa32802aaca0.png" alt="配图8" class="index-section-img" />
+            <img src="https://pic1.imgdb.cn/item/69ad4a8bf69caa32802aaca1.png" alt="配图9" class="index-section-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 板块5：愿景升华 -->
+      <div id="section5" class="text-content-section index-text-section">
+        <div class="text-box-container">
+          <div class="section-title">让记忆，不再随时间消逝</div>
+          <div class="text-content">
+            希望在未来，我们的 MediSyn 能为中老年群体筑起一道记忆防线；将复杂的基因治疗融入简单的刷牙习惯中。以"微生物侦探"的身份，在源头阻断病原体入侵，调节口腔微生态，让记忆不再随时间消逝，守护每一个家庭的微笑。
+          </div>
+          <div class="index-section-images index-section-images-1">
+            <img src="https://pic1.imgdb.cn/item/69ad4a8bf69caa32802aaca0.png" alt="配图8" class="index-section-img" />
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-wrapper">
+        <div class="footer-content">
+          <div class="footer-nav">
+            <div class="footer-nav-row">
+              <button class="footer-btn" onclick="window.location.href='../首页/index.html'">首页</button>
+              <button class="footer-btn" onclick="window.location.href='../项目介绍/description.html'">项目介绍</button>
+              <button class="footer-btn" onclick="window.location.href='../项目设计/engineering.html'">项目设计</button>
+              <button class="footer-btn" onclick="window.location.href='../线路与元件/result.html'">线路与元件</button>
+              <button class="footer-btn" onclick="window.location.href='../实验设计/experiment.html'">实验设计</button>
+              <button class="footer-btn" onclick="window.location.href='../人类实践/hp.html'">人类实践</button>
+              <button class="footer-btn" onclick="window.location.href='../建模/model.html'">建模</button>
+              <button class="footer-btn" onclick="window.location.href='../成员介绍/personal.html'">成员介绍</button>
+              <button class="footer-btn" onclick="window.location.href='../联系我们/contact.html'">联系我们</button>
+            </div>
+          </div>
+          <img src="https://pic1.imgdb.cn/item/69ad4a46f69caa32802aac7f.png" alt="Logo" class="seaguy-logo" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

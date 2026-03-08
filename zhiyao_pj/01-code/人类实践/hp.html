@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- 侧边导航栏 -->
+    <nav class="side-nav show-nav">
+      <div class="nav-item"><a href="#section0" class="nav-link">人类实践概况</a></div>
+      <div class="nav-item"><a href="#section1" class="nav-link">调查问卷报告</a></div>
+    </nav>
+
+    <!-- 返回顶部按钮 -->
+    <div
+      class="back-to-top-wrapper"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    >
+      <img src="https://pic1.imgdb.cn/item/69ad4a2ef69caa32802aac78.png" alt="回到顶部" class="back-to-top" />
+      <div class="tooltip">回到顶部</div>
+    </div>
+
+    <!-- 菜单区域 -->
+    <div class="menu-area">
+      <a href="../首页/index.html" class="logo-link">
+        <img src="https://pic1.imgdb.cn/item/69ad4a46f69caa32802aac7f.png" alt="Web Logo" class="logo-img" />
+      </a>
+      <div class="btn-container">
+        <button class="btn home-btn" onclick="window.location.href='../首页/index.html'">首页 <i class="fas fa-home"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='../项目介绍/description.html'">项目介绍 <i class="fas fa-book"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='../项目设计/engineering.html'">项目设计 <i class="fas fa-cog"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='../线路与元件/result.html'">线路与元件 <i class="fas fa-project-diagram"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='../实验设计/experiment.html'">实验设计 <i class="fas fa-flask"></i></button>
+        <button class="btn home-btn nav-active" onclick="window.location.href='../人类实践/hp.html'">人类实践 <i class="fas fa-earth-asia"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='../建模/model.html'">建模 <i class="fas fa-chart-line"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='../成员介绍/personal.html'">成员介绍 <i class="fas fa-user"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='../联系我们/contact.html'">联系我们 <i class="fas fa-envelope"></i></button>
+      </div>
+    </div>
+
+    <!-- 背景 -->
+    <div class="page-background"></div>
+    <div class="hero-section">
+      <div class="main-title">人类实践</div>
+      <div class="scroll-hint">
+        向下滚动查看文档
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="content-area">
+      <div class="main-content">
+        <div id="section0" class="text-content-section" style="margin-top: 5rem;">
+          <div class="text-box-container">
+            <div class="section-title">人类实践概况</div>
+            <div class="experiment-images-grid" style="margin-top: 1rem;">
+              <img src="https://pic1.imgdb.cn/item/69ad4a4bf69caa32802aac84.png" alt="人类实践 1" class="content-img" />
+              <img src="https://pic1.imgdb.cn/item/69ad4a4af69caa32802aac82.jpg" alt="人类实践 2" class="content-img" />
+              <img src="https://pic1.imgdb.cn/item/69ad4a4af69caa32802aac81.jpg" alt="人类实践 3" class="content-img" />
+              <img src="https://pic1.imgdb.cn/item/69ad4a64f69caa32802aac8d.jpg" alt="人类实践 4" class="content-img" />
+              <img src="https://pic1.imgdb.cn/item/69ad4a64f69caa32802aac8f.jpg" alt="人类实践 5" class="content-img" />
+              <img src="https://pic1.imgdb.cn/item/69ad4a64f69caa32802aac8e.jpg" alt="人类实践 6" class="content-img" />
+            </div>
+          </div>
+        </div>
+
+        <div id="section1" class="text-content-section">
+          <div class="text-box-container docx-accordion">
+            <div class="docx-accordion-title" onclick="this.parentElement.classList.toggle('active')">
+              <span>调查问卷报告</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="docx-accordion-content">
+              <div class="docx-viewer-wrapper">
+                <iframe id="hp-pdf-iframe" class="docx-iframe" src="" title="调查问卷报告 PDF"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- 页尾区域 -->
+      <div class="footer-wrapper">
+        <div class="footer-content">
+          <div class="footer-nav">
+            <div class="footer-nav-row">
+              <button class="footer-btn" onclick="window.location.href='../首页/index.html'">首页</button>
+              <button class="footer-btn" onclick="window.location.href='../项目介绍/description.html'">项目介绍</button>
+              <button class="footer-btn" onclick="window.location.href='../项目设计/engineering.html'">项目设计</button>
+              <button class="footer-btn" onclick="window.location.href='../线路与元件/result.html'">线路与元件</button>
+              <button class="footer-btn" onclick="window.location.href='../实验设计/experiment.html'">实验设计</button>
+              <button class="footer-btn" onclick="window.location.href='../人类实践/hp.html'">人类实践</button>
+              <button class="footer-btn" onclick="window.location.href='../建模/model.html'">建模</button>
+              <button class="footer-btn" onclick="window.location.href='../成员介绍/personal.html'">成员介绍</button>
+              <button class="footer-btn" onclick="window.location.href='../联系我们/contact.html'">联系我们</button>
+            </div>
+          </div>
+          <img
+            src="https://pic1.imgdb.cn/item/69ad4a46f69caa32802aac7f.png"
+            alt="Seaguy Logo"
+            class="seaguy-logo"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="../script.js"></script>
+    <script>
+      (function() {
+        var iframe = document.getElementById('hp-pdf-iframe');
+        if (iframe) iframe.src = '人类实践.pdf';
+      })();
+    </script>
+  </body>
+</html>

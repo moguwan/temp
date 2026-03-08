@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>建模 - 制药工程</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <nav class="side-nav show-nav">
+    <div class="nav-item"><a href="#section0" class="nav-link">Overview (概述)</a></div>
+    <div class="nav-item"><a href="#section1" class="nav-link">易感性窗口分析</a></div>
+    <div class="nav-item"><a href="#section2" class="nav-link">分子对接验证</a></div>
+    <div class="nav-item"><a href="#section3" class="nav-link">生物膜瓦解动力学</a></div>
+    <div class="nav-item"><a href="#section4" class="nav-link">剂量-效应优化</a></div>
+    <div class="nav-item"><a href="#section-conclusion" class="nav-link">Conclusion (结论)</a></div>
+  </nav>
+
+  <div class="back-to-top-wrapper" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <img src="https://pic1.imgdb.cn/item/69ad4a2ef69caa32802aac78.png" alt="回到顶部" class="back-to-top" />
+    <div class="tooltip">回到顶部</div>
+  </div>
+
+  <div class="page-background"></div>
+  <div class="menu-area">
+    <a href="../首页/index.html" class="logo-link">
+      <img src="https://pic1.imgdb.cn/item/69ad4a46f69caa32802aac7f.png" alt="Logo" class="logo-img" />
+    </a>
+    <div class="btn-container">
+      <button class="btn home-btn" onclick="window.location.href='../首页/index.html'">首页 <i class="fas fa-home"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../项目介绍/description.html'">项目介绍 <i class="fas fa-book"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../项目设计/engineering.html'">项目设计 <i class="fas fa-cog"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../线路与元件/result.html'">线路与元件 <i class="fas fa-project-diagram"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../实验设计/experiment.html'">实验设计 <i class="fas fa-flask"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../人类实践/hp.html'">人类实践 <i class="fas fa-earth-asia"></i></button>
+      <button class="btn home-btn nav-active" onclick="window.location.href='../建模/model.html'">建模 <i class="fas fa-chart-line"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../成员介绍/personal.html'">成员介绍 <i class="fas fa-user"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='../联系我们/contact.html'">联系我们 <i class="fas fa-envelope"></i></button>
+    </div>
+  </div>
+
+  <div class="hero-section">
+    <div class="main-title">建模</div>
+    <div class="scroll-hint">向下滚动 <i class="fas fa-chevron-down"></i></div>
+  </div>
+
+  <div class="content-area">
+    <div class="main-content">
+      <div id="section0" class="text-content-section model-overview" style="margin-top: 5rem;">
+        <div class="text-box-container">
+          <h2 class="model-overview-title">Overview (概述)</h2>
+          <div class="model-overview-text">
+            <p>在 MediSyn 项目中，建模是我们 DBTL (Design-Build-Test-Learn) 工程循环的核心驱动力，它指导我们从分子层面优化效应蛋白、从系统层面调控生物膜瓦解，并从疾病机制层面理解干预窗口，确保 Agent EcN 能够以最高效、最精准的方式发挥作用。</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="section1" class="model-module text-content-section">
+        <div class="text-box-container">
+          <div class="model-module-inner">
+            <img src="https://pic1.imgdb.cn/item/69ad4a76f69caa32802aac90.jpg" alt="易感性窗口分析" class="model-module-img" />
+            <div class="model-module-text model-module-text-top">
+              <h3 class="model-module-title">易感性窗口分析 (Vulnerability Window Analysis)</h3>
+              <p class="model-module-intro">本研究采用单细胞转录组学技术(scRNA-seq)分析阿尔茨海默病小鼠模型(GSE98969数据集)中小胶质细胞的动态变化。通过计算伪时间(pseudotime)轨迹,我们重构了小胶质细胞从稳态型(Homeostatic)向疾病相关型(DAM)转变的连续过程。</p>
+            </div>
+            <div class="model-module-text model-module-text-bottom">
+              <h4>关键元素</h4>
+              <p><strong>Panel A(细胞类型分布)</strong>：通过UMAP降维可视化显示三种小胶质细胞亚群的空间分布。稳态型小胶质细胞(蓝色)表达P2ry12、Cx3cr1等标志基因,维持正常免疫监视功能;激活型(橙色)处于过渡状态;疾病相关型(紫色)高表达Apoe、Trem2等炎症标志物,代表病理性激活状态。</p>
+              <p><strong>Panel B(疾病进程)</strong>：使用伪时间算法(Diffusion Pseudotime)量化疾病进展程度。颜色梯度从深紫(早期)到黄色(晚期)反映了细胞从健康向病理状态的连续转变,这种无监督的计算方法避免了人为分组的主观性。</p>
+              <p><strong>Panel C(基因动态表达)</strong>：核心发现。防御基因(绿色虚线,如P2ry12、Cx3cr1)在早期高表达,随疾病进展持续下降;风险基因(红色实线,如C5ar1、Tlr2、Nfkb1)呈相反趋势。统计表格显示所有基因在早期vs晚期的差异均达到极显著水平(FDR校正后q&lt;0.001),效应量(Cohen's d)均&gt;2.0,表明这些变化具有强生物学意义。</p>
+              <h4>关键洞察</h4>
+              <p>两类基因的交叉点(约伪时间0.3-0.4)定义了"易感性窗口"——此时防御机制尚未完全崩溃,而病理信号已开始积累。这一窗口提示早期干预的最佳时机:在防御基因表达仍处于中高水平时阻断风险因子,可能比晚期治疗更有效。这支持了"预防优于治疗"的策略,因为一旦进入晚期(伪时间&gt;0.7),防御基因表达已降至基线,神经保护能力严重受损。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="section2" class="model-module text-content-section">
+        <div class="text-box-container">
+          <div class="model-module-inner">
+            <img src="https://pic1.imgdb.cn/item/69ad4a76f69caa32802aac92.jpg" alt="分子对接验证" class="model-module-img" />
+            <div class="model-module-text model-module-text-top">
+              <h3 class="model-module-title">第二步:分子对接验证 (Molecular Docking Analysis)</h3>
+              <p class="model-module-intro">为验证Cystatin C能否特异性抑制牙龈卟啉单胞菌的毒力因子Gingipains,我们采用基于物理化学原理的分子对接模拟。该方法通过计算蛋白质-配体复合物的结合自由能(ΔG)预测相互作用强度,是药物设计中的标准验证手段。</p>
+              <p>实验设计包含严格的对照体系:阴性对照使用绿色荧光蛋白(GFP,非蛋白酶)与Cystatin C对接,预期无特异性结合;阳性对照使用已知抑制剂KYT-36验证方法可靠性;实验组测试Cystatin C与三种Gingipains(RgpA、RgpB、Kgp)的结合。</p>
+            </div>
+            <div class="model-module-text model-module-text-bottom">
+              <h4>关键元素</h4>
+              <p><strong>Panel A(结合能箱线图)</strong>：显示Cystatin C与三种Gingipains的结合能均&lt;-12 kcal/mol,对应解离常数(Ki)在纳摩尔级别,属于强结合范畴。相比之下,GFP阴性对照的结合能仅-5.41 kcal/mol,差异达8 kcal/mol以上。这种能量差异在生物学上意味着Cystatin C与Gingipains的亲和力比非特异性结合强约10^6倍。</p>
+              <p><strong>Panel B(效应量分析)</strong>：采用Cohen's d量化组间差异的标准化效应大小。所有Gingipains vs GFP的效应量均&gt;5.7,远超"大效应"阈值(d&gt;0.8),且统计显著性p&lt;0.001,表明这不是随机波动而是真实的生物学现象。</p>
+              <p><strong>Panel C(结合能热图)</strong>：展示20次独立模拟的重现性。每个蛋白-配体组合的结合能标准差&lt;1.5 kcal/mol,证明结果稳定可靠。热图中RgpA/RgpB/Kgp三列颜色一致性深红,而GFP列为浅黄,视觉上强化了特异性结合的证据。</p>
+              <h4>机制解释</h4>
+              <p>Cystatin C是半胱氨酸蛋白酶抑制剂家族成员,其抑制环(L1/L2 loop)能插入蛋白酶活性位点,封闭催化三联体(Cys-His-Asn)。Gingipains恰好属于半胱氨酸蛋白酶,因此Cystatin C能像"钥匙配锁"般精准抑制其活性。这一结果支持TACTIC 3策略:即使细菌被杀死,残留的Gingipains毒素仍可能穿透血脑屏障,而Cystatin C可作为"分子手铐"中和这些毒素,构建大脑防线的最后一道屏障。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="section3" class="model-module text-content-section">
+        <div class="text-box-container">
+          <div class="model-module-inner">
+            <img src="https://pic1.imgdb.cn/item/69ad4a2ff69caa32802aac7b.jpg" alt="生物膜瓦解动力学" class="model-module-img" />
+            <div class="model-module-text model-module-text-top">
+              <h3 class="model-module-title">第三步:生物膜瓦解动力学 (Biofilm Disruption Kinetics)</h3>
+              <p class="model-module-intro">牙周致病菌构建的生物膜是抗生素治疗失败的主要原因。本研究建立了基于米氏方程(Michaelis-Menten kinetics)的常微分方程(ODE)模型,模拟DspB和DNase I两种酶对生物膜主要成分PNAG(多糖)和eDNA(胞外DNA)的降解过程。</p>
+              <p><strong>模型核心机制</strong>：生物膜中PNAG形成粘性基质,屏蔽90%的eDNA使其不被DNase I接触;同时eDNA缠绕PNAG,降低DspB的可及性60%。这种交叉保护导致单酶策略效率低下。模型引入协同参数:DspB降解PNAG后,eDNA暴露度提升,DNase I效率增强4倍;反之DNase I清除eDNA后,PNAG可及性提升,DspB效率增强2.5倍,形成正反馈循环。</p>
+            </div>
+            <div class="model-module-text model-module-text-bottom">
+              <h4>关键元素</h4>
+              <p><strong>Panel A(动力学曲线)</strong>：展示120分钟内生物膜完整性的时间演变。对照组(黑色虚线)保持100%,证明无自然降解;DspB单独(蓝色)降至81.9%,DNase I单独(绿色)仅降至93.0%,均效果有限;双酶协同组(红色粗线)急剧下降至45.8%,曲线斜率明显陡峭,显示加速瓦解效应。</p>
+              <p><strong>Panel B(终点比较)</strong>：用柱状图直观对比120分钟时的残余完整性。双酶组的降解率(54.2%)是最佳单酶(DspB,18.1%)的3.0倍,达到"300%提升"的设计目标。误差棒显示模拟的稳定性,统计检验(t-test)显示双酶vs单酶的p值&lt;10^-18,远低于0.001阈值。</p>
+              <p><strong>Panel C(协同量化)</strong>：采用Bliss独立模型计算理论预期效应。若两酶完全独立作用,预期降解率应为23.8%(加和效应减去重叠部分);实际观察到54.2%,协同指数CI=2.27,超过弱协同阈值(CI&gt;1.2)。虽然CI未达3.0,但相对最佳单酶的倍数增强(fold-change)为3.0×,符合PPT宣称。</p>
+              <p><strong>Panel D/E(机制解析)</strong>：动态曲线显示PNAG和eDNA在双酶作用下同步快速下降,而单酶组一种成分下降缓慢导致另一种受保护。</p>
+              <h4>临床意义</h4>
+              <p>该模型基于6篇文献的实验参数(Kaplan 2004, Itoh 2005等),具有生物学可信度。结果提示单一抗生素或单酶制剂难以突破生物膜防御,而多靶点协同策略可实现质的飞跃。这为工程益生菌EcN同时表达DspB和DNase I的设计提供了定量依据。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="section4" class="model-module text-content-section">
+        <div class="text-box-container">
+          <div class="model-module-inner">
+            <img src="https://pic1.imgdb.cn/item/69ad4a76f69caa32802aac94.png" alt="剂量-效应优化" class="model-module-img" />
+            <div class="model-module-text model-module-text-top">
+              <h3 class="model-module-title">第四步:剂量-效应优化 (Dose-Response Optimization)</h3>
+              <p class="model-module-intro">在确认双酶协同有效后,需确定最优酶浓度配比以平衡疗效与成本。本分析构建了10×10浓度矩阵(共100种组合),系统评估不同DspB和DNase I剂量下的生物膜降解效率。</p>
+              <p><strong>实用价值</strong>：该分析为MediSyn益生菌牙膏的配方设计提供了数据支撑。假设基础浓度(1×)对应每克牙膏含0.2 μM酶,则最优配方应含1.0 μM DspB + 1.0 μM DNase I。同时,剂量-效应曲线的非线性特征提示:日常预防可使用较低剂量(2-3×)维持基础保护,而急性牙周感染期可短期使用高剂量(5×)强化治疗。这种"阶梯式给药"策略兼顾了安全性、经济性和有效性。</p>
+            </div>
+            <div class="model-module-text model-module-text-bottom">
+              <h4>关键元素</h4>
+              <p><strong>Panel A(三维响应曲面)</strong>：以DspB浓度(x轴)、DNase I浓度(y轴)为自变量,生物膜降解率(z轴)为因变量,绘制连续响应面。曲面呈现非线性特征:低浓度区域(&lt;1×)曲面平坦,表明酶量不足时增加剂量收效甚微;中等浓度区(1-3×)曲面陡峭上升,显示剂量-效应关系敏感;高浓度区(&gt;4×)曲面趋于平台,提示达到饱和无需继续增加。红色星标标注最优点(5×DspB + 5×DNase),位于曲面峰值,降解率达最高。</p>
+              <p><strong>Panel B(二维热图)</strong>：将三维信息投影到平面,颜色从绿(高降解)到红(低降解)编码效率。对角线区域(DspB:DNase比例接近1:1)颜色最深绿,表明等比例配比效果最佳。偏离对角线的区域颜色变浅,说明单一酶过量而另一酶不足会降低协同效应。红色方框标注最优组合,数值标注显示该点降解率为54.2%。</p>
+              <p><strong>Panel C(协同指数热图)</strong>：量化每个浓度组合的协同强度(CI值)。中心区域CI&gt;2.0呈暖色(红/橙),边缘区域CI&lt;1.5呈冷色(蓝),形成"热岛"分布。这表明协同效应不是恒定的,而是浓度依赖的:只有当两种酶浓度都处于合理范围时,才能充分发挥协同作用。过低或过高浓度都会削弱协同性。</p>
+              <p><strong>Panel D(比例优化曲线)</strong>：将数据按DspB:DNase比例分组,绘制平均降解率。曲线在比例1:1附近达到峰值,向两侧递减。这一发现具有实践指导意义:在设计工程菌表达系统时,应调控启动子强度使两种酶的表达量接近1:1,而非盲目提高某一酶的产量。</p>
+              <p><strong>Panel E(成本-效益分析)</strong>：横轴为总酶用量(成本),纵轴为降解率(效益),散点颜色编码单位成本的降解效率。最优点(红星)虽然总成本较高(10×),但位于效益曲线的"拐点"——再增加剂量收益递减。颜色梯度显示中等剂量区(2-4×)的成本效益比最高(深紫色),提示若资源受限,可选择3×DspB + 3×DNase作为次优方案,仍能达到约45%降解率。</p>
+            </div>
+            </div>
+          </div>
+        </div>
+
+      <div id="section-conclusion" class="model-conclusion text-content-section">
+        <div class="text-box-container">
+          <h2 class="model-overview-title">Conclusion (结论)</h2>
+          <div class="model-overview-text">
+            <p>总而言之，MediSyn 的建模工作为我们项目的科学性、合理性和前瞻性提供了全面且深入的支撑。它不仅优化了工程细菌的性能，更将牙周健康与大脑健康紧密联结，为对抗阿尔茨海默病提供了新的思路和希望。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-wrapper">
+        <div class="footer-content">
+          <div class="footer-nav">
+            <div class="footer-nav-row">
+              <button class="footer-btn" onclick="window.location.href='../首页/index.html'">首页</button>
+              <button class="footer-btn" onclick="window.location.href='../项目介绍/description.html'">项目介绍</button>
+              <button class="footer-btn" onclick="window.location.href='../项目设计/engineering.html'">项目设计</button>
+              <button class="footer-btn" onclick="window.location.href='../线路与元件/result.html'">线路与元件</button>
+              <button class="footer-btn" onclick="window.location.href='../实验设计/experiment.html'">实验设计</button>
+              <button class="footer-btn" onclick="window.location.href='../人类实践/hp.html'">人类实践</button>
+              <button class="footer-btn" onclick="window.location.href='../建模/model.html'">建模</button>
+              <button class="footer-btn" onclick="window.location.href='../成员介绍/personal.html'">成员介绍</button>
+              <button class="footer-btn" onclick="window.location.href='../联系我们/contact.html'">联系我们</button>
+            </div>
+          </div>
+          <img src="https://pic1.imgdb.cn/item/69ad4a46f69caa32802aac7f.png" alt="Logo" class="seaguy-logo" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
