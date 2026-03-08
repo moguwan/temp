@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我们 - 制药工程</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 联系我们页 - 卡片样式 */
+    .contact-page .side-nav { display: none; }
+    .contact-page .scroll-hint { display: none; }
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+    .contact-card {
+      background: linear-gradient(145deg, rgba(255,255,255,0.98) 0%, rgba(248,250,252,0.98) 100%);
+      backdrop-filter: blur(16px);
+      border-radius: 20px;
+      padding: 2rem 2.25rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.9);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      border: 1px solid rgba(255,255,255,0.6);
+    }
+    .contact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(91,138,158,0.15), 0 0 0 1px rgba(91,138,158,0.2);
+    }
+    .contact-card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #fff;
+    }
+    .contact-card.email .contact-card-icon {
+      background: linear-gradient(135deg, #5b8a9e 0%, #4a7a8e 100%);
+      box-shadow: 0 6px 20px rgba(91,138,158,0.35);
+    }
+    .contact-card.phone .contact-card-icon {
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+      box-shadow: 0 6px 20px rgba(14,165,233,0.35);
+    }
+    .contact-card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.95rem 1.1rem;
+      padding-left: 1.25rem;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.7);
+      border-radius: 12px;
+      border: 1px solid rgba(226,232,240,0.8);
+      transition: all 0.25s ease;
+    }
+    .contact-item:last-child { margin-bottom: 0; }
+    .contact-item:hover {
+      background: rgba(255,255,255,0.95);
+      border-color: rgba(91,138,158,0.25);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    .contact-item-tag {
+      flex-shrink: 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #5b8a9e;
+      min-width: 2.2em;
+      padding: 0.25rem 0.5rem;
+      background: rgba(91,138,158,0.12);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .contact-item-value {
+      flex: 1;
+      font-size: 1.05rem;
+      color: #475569;
+      word-break: break-all;
+    }
+    .contact-item-value a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .contact-item-value a:hover {
+      color: #0ea5e9;
+    }
+  </style>
+</head>
+<body class="contact-page">
+  <div class="back-to-top-wrapper" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <img src="back-to-top.svg" alt="回到顶部" class="back-to-top" />
+    <div class="tooltip">回到顶部</div>
+  </div>
+
+  <div class="page-background"></div>
+  <div class="menu-area">
+    <a href="index.html" class="logo-link">
+      <img src="logo.png" alt="Logo" class="logo-img" />
+    </a>
+    <div class="btn-container">
+      <button class="btn home-btn" onclick="window.location.href='index.html'">首页 <i class="fas fa-home"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='description.html'">项目介绍 <i class="fas fa-book"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='engineering.html'">项目设计 <i class="fas fa-cog"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='result.html'">线路与元件 <i class="fas fa-project-diagram"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='experiment.html'">实验设计 <i class="fas fa-flask"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='hp.html'">人类实践 <i class="fas fa-earth-asia"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='personal.html'">成员介绍 <i class="fas fa-user"></i></button>
+      <button class="btn home-btn" onclick="window.location.href='model.html'">建模 <i class="fas fa-chart-line"></i></button>
+      <button class="btn home-btn nav-active" onclick="window.location.href='contact.html'">联系我们 <i class="fas fa-envelope"></i></button>
+    </div>
+  </div>
+
+  <div class="hero-section">
+    <div class="main-title">联系我们</div>
+    <div class="hero-subtitle">Contact</div>
+  </div>
+
+  <div class="content-area">
+    <div class="main-content">
+      <div class="contact-cards">
+        <div class="contact-card email">
+          <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-card-title">邮箱</div>
+          <div class="contact-item">
+            <span class="contact-item-tag">董</span>
+            <span class="contact-item-value"><a href="mailto:3456861454@qq.com">3456861454@qq.com</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item-tag">许</span>
+            <span class="contact-item-value"><a href="mailto:1064841886@qq.com">1064841886@qq.com</a></span>
+          </div>
+        </div>
+        <div class="contact-card phone">
+          <div class="contact-card-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="contact-card-title">联系方式</div>
+          <div class="contact-item">
+            <span class="contact-item-tag">董</span>
+            <span class="contact-item-value"><a href="tel:17278932615">17278932615</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item-tag">许</span>
+            <span class="contact-item-value"><a href="tel:18133314610">18133314610</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-wrapper">
+        <div class="footer-content">
+          <div class="footer-nav">
+            <div class="footer-nav-row">
+              <button class="footer-btn" onclick="window.location.href='index.html'">首页</button>
+              <button class="footer-btn" onclick="window.location.href='description.html'">项目介绍</button>
+              <button class="footer-btn" onclick="window.location.href='engineering.html'">项目设计</button>
+              <button class="footer-btn" onclick="window.location.href='result.html'">线路与元件</button>
+              <button class="footer-btn" onclick="window.location.href='experiment.html'">实验设计</button>
+              <button class="footer-btn" onclick="window.location.href='hp.html'">人类实践</button>
+              <button class="footer-btn" onclick="window.location.href='personal.html'">成员介绍</button>
+              <button class="footer-btn" onclick="window.location.href='model.html'">建模</button>
+              <button class="footer-btn" onclick="window.location.href='contact.html'">联系我们</button>
+            </div>
+          </div>
+          <img src="logo.png" alt="Logo" class="seaguy-logo" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

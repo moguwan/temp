@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="side-nav show-nav">
+      <div class="nav-item"><a href="#section1" class="nav-link">概述</a></div>
+      <div class="nav-item"><a href="#section2" class="nav-link">循环一：核心武备</a></div>
+      <div class="nav-item"><a href="#section3" class="nav-link">循环二：底盘筛选</a></div>
+      <div class="nav-item"><a href="#section4" class="nav-link">循环三：破防协同</a></div>
+      <div class="nav-item"><a href="#section5" class="nav-link">循环四：生物安全与靶向</a></div>
+      <div class="nav-item"><a href="#section6" class="nav-link">参考文献</a></div>
+    </nav>
+
+    <div class="back-to-top-wrapper" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      <img src="back-to-top.svg" alt="回到顶部" class="back-to-top" />
+      <div class="tooltip">回到顶部</div>
+    </div>
+
+    <div class="menu-area">
+      <a href="index.html" class="logo-link"><img src="logo.png" alt="Web Logo" class="logo-img" /></a>
+      <div class="btn-container">
+        <button class="btn home-btn" onclick="window.location.href='index.html'">首页 <i class="fas fa-home"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='description.html'">项目介绍 <i class="fas fa-book"></i></button>
+        <button class="btn home-btn nav-active" onclick="window.location.href='engineering.html'">项目设计 <i class="fas fa-cog"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='result.html'">线路与元件 <i class="fas fa-project-diagram"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='experiment.html'">实验设计 <i class="fas fa-flask"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='hp.html'">人类实践 <i class="fas fa-earth-asia"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='personal.html'">成员介绍 <i class="fas fa-user"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='model.html'">建模 <i class="fas fa-chart-line"></i></button>
+        <button class="btn home-btn" onclick="window.location.href='contact.html'">联系我们 <i class="fas fa-envelope"></i></button>
+      </div>
+    </div>
+
+    <div class="page-background"></div>
+    <div class="hero-section">
+      <div class="main-title">项目设计</div>
+      <div class="hero-subtitle">Project Design: Engineering "Agent EcN" for the Oral-Brain Axis</div>
+      <div class="scroll-hint">向下滚动 <i class="fas fa-chevron-down"></i></div>
+    </div>
+
+    <div class="content-area">
+      <div class="main-content">
+        <div id="section1" class="text-content-section" style="margin-top: 5rem;">
+          <div class="text-box-container">
+            <div class="section-title">概述 (Overview)</div>
+            <div class="text-content">
+              <strong>工程化思维 (The Engineering Mindset)</strong><br><br>
+              合成生物学的核心在于将复杂的生命系统转化为可预测、可编程的工程模块。在 MediSyn 项目中，我们致力于解决一个看似遥远却紧密相连的医学难题：通过干预牙周炎来拦截阿尔茨海默病 (AD) 的发展。<br><br>
+              基于"口-脑轴 (Oral-Brain Axis)"理论，我们锁定了头号嫌疑犯——牙龈卟啉单胞菌 (P. gingivalis)。为了彻底清除其构筑的生物膜堡垒，并中和其释放的神经毒素 (Gingipains)，我们严格遵循了 <strong>研究 (Research)、设计 (Design)、构建 (Build)、测试 (Test) 和 学习 (Learn)</strong> 的工程循环。我们的项目经历了四个关键的迭代周期，最终打造出了智能化的微型机器人——Agent EcN。本页面将完整记录我们的工程化旅程。
+            </div>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2rem 0;">
+              <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; align-items: center;">
+                <img src="项目设计_a.png" alt="图 A：战术拆堡垒、斩嫌犯、清工具总体概念图" class="content-img" style="max-width: 100%;">
+                <div class="image-caption" style="text-align: center; margin-top: 0.5rem;">图 A | 战术1、2、3：拆堡垒、斩嫌犯、清工具 总体概念图</div>
+              </div>
+              <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; align-items: center;">
+                <img src="项目设计_b.png" alt="图 B：基因线路图 Gene Circuit" class="content-img" style="max-width: 100%;">
+                <div class="image-caption" style="text-align: center; margin-top: 0.5rem;">图 B | 基因线路图 Gene Circuit</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="section2" class="text-content-section">
+          <div class="text-box-container">
+            <div class="section-title">循环一：核心武备 (Cycle 1: Therapeutic Payload)</div>
+            <div class="text-content">
+              <strong>目标：</strong> 设计一套能彻底瓦解 P. gingivalis 生物膜、杀灭致病菌并中和毒素的多靶点武器库。<br><br>
+              <strong>1. Design (设计):</strong><br>
+              抗生素由于难以穿透生物膜而经常失效。我们设计了"三步走"的战术模块：<br>
+              • <strong>融化与剪切：</strong> 使用 DspB (降解 PNAG 多糖) 和 DNase I (切断 eDNA) 协同瓦解生物膜堡垒。<br>
+              • <strong>基因狙击：</strong> 使用 Cas9 直接切割暴露后的 P. gingivalis 基因组，诱导其死亡。<br>
+              • <strong>毒素锁定：</strong> 释放 Cystatin C，如同"分子手铐"般中和 Gingipains 毒素，保护血脑屏障。<br>
+              • <strong>分泌引擎：</strong> 为了让 DspB 和 DNase I 发挥胞外作用，我们为其添加了 PelB 信号肽，引导其分泌至周质空间。<br><br>
+              <strong>2. Build & Test (构建与测试):</strong><br>
+              我们利用分子对接技术 (Molecular Docking) 验证了 Cystatin C 与 Gingipains (RgpA/RgpB/Kgp) 的结合能。结果显示结合能均 &lt; -12 kcal/mol (纳摩尔级亲和力)，远超对照组。<br><br>
+              <strong>3. Learn (学习):</strong><br>
+              武器库非常强大，但我们意识到：如果这些破坏性酶和 Cas9 在健康的口腔环境中随意释放，可能会破坏正常菌群。我们需要一个能精准识别"病灶"的底盘和开关。
+            </div>
+            <div style="display: flex; justify-content: center; margin: 2rem 0;">
+              <img src="项目设计_c.jpg" alt="图 C：雷达图 Radar Chart" class="content-img" style="max-width: 900px;">
+            </div>
+            <div class="image-caption" style="text-align: center;">图 C | 雷达图 Radar Chart</div>
+          </div>
+        </div>
+
+        <div id="section3" class="text-content-section">
+          <div class="text-box-container">
+            <div class="section-title">循环二：底盘筛选 (Cycle 2: Chassis Selection)</div>
+            <div class="text-content">
+              <strong>目标：</strong> 筛选并验证一种既能承载庞大基因线路，又能主动寻靶的生物底盘。<br><br>
+              <strong>1. Design (设计):</strong><br>
+              我们对比了传统的口腔益生菌（如乳酸杆菌 Lactobacillus）和大肠杆菌 Nissle 1917 (EcN)。我们需要底盘具备高遗传操作性 (Genetic Tractability) 和良好的分泌效率。<br><br>
+              <strong>2. Test (测试 & 评估):</strong><br>
+              通过文献挖掘与可行性评估，我们发现 EcN 能够轻松承载我们 &gt;11kb 的多顺反子大质粒。更重要的是，EcN 具备天然的趋化性，能够主动游向并定植于缺氧的病理环境（如牙周袋深处）。此外，近期的临床 I 期试验已证明了工程化 EcN 在人体内的绝对安全性。<br><br>
+              <strong>3. Learn (学习):</strong><br>
+              我们决定放弃乳酸杆菌，全面采用 EcN 作为 Agent 底盘。底盘选定了，但我们发现 DspB 和 DNase I 的单独降解效率有限，我们需要在干实验中优化它们的配比。
+            </div>
+            <div style="display: flex; justify-content: center; margin: 2rem 0;">
+              <img src="项目设计_f.jpg" alt="图 F：底盘筛选" class="content-img" style="max-width: 900px;">
+            </div>
+            <div class="image-caption" style="text-align: center;">图 F | 底盘筛选</div>
+          </div>
+        </div>
+
+        <div id="section4" class="text-content-section">
+          <div class="text-box-container">
+            <div class="section-title">循环三：破防协同 (Cycle 3: Synergy & Optimization)</div>
+            <div class="text-content">
+              <strong>目标：</strong> 优化双酶协同系统的降解动力学，以最小的代谢代价实现生物膜的最大清除率。<br><br>
+              <strong>1. Design (设计):</strong><br>
+              生物膜中的多糖 (PNAG) 和胞外DNA (eDNA) 存在物理交叉保护。我们假设 DspB 和 DNase I 同时存在时会产生正反馈循环。我们建立了基于米氏方程的常微分方程 (ODE) 模型。<br><br>
+              <strong>2. Test (干实验测试):</strong><br>
+              动力学模拟显示，单酶处理 120 分钟后降解率不足 20%，而双酶协同组的生物膜降解率达到了 54.2%，效率提升了 <strong>300%</strong>，协同指数 (CI) 达到 2.27。<br><br>
+              <strong>3. Learn (学习):</strong><br>
+              通过构建 10×10 浓度矩阵的响应面分析，我们找到了全局最优解：当 <strong>DspB : DNase I 的活性比约为 3.33:1</strong> 时，系统成本效益最高，清除率接近理论极限 (99.9%)。这为我们后续的产品配方提供了精确的数据支撑。
+            </div>
+            <div style="display: flex; justify-content: center; margin: 2rem 0;">
+              <img src="项目设计_d.jpg" alt="图 D：生物膜瓦解动力学" class="content-img" style="max-width: 900px;">
+            </div>
+            <div class="image-caption" style="text-align: center;">图 D | 生物膜瓦解动力学 / 剂量-效应优化 3D 图</div>
+          </div>
+        </div>
+
+        <div id="section5" class="text-content-section">
+          <div class="text-box-container">
+            <div class="section-title">循环四：生物安全与靶向 (Cycle 4: Biosafety & Containment)</div>
+            <div class="text-content">
+              <strong>目标：</strong> 构建严密的生物遏制机制，确保工程菌<strong>仅</strong>在牙周炎病灶内释放载荷，实现"空间特异性"。<br><br>
+              <strong>1. Design (设计):</strong><br>
+              我们放弃了传统的化学诱导开关，转而利用发炎牙周袋的天然物理特征——极度缺氧 (Anaerobic)。我们引入了受 FNR 蛋白调控的 pnirB 启动子。<br><br>
+              <strong>2. Test (测试):</strong><br>
+              预期模型表明，在富氧的健康口腔表面，pnirB 启动子处于关闭状态 (OFF)，Agent EcN 保持沉默，不干扰正常菌群；而当 Agent EcN 游入深层牙周袋 (&lt;2% 氧浓度) 时，pnirB 启动子被强烈激活 (ON)，特异性释放治疗蛋白。<br><br>
+              <strong>3. Learn (The Final System):</strong><br>
+              我们成功闭合了工程循环。Agent EcN 现在是一个 <strong>治疗手段致命 (Cycle 1)、底盘稳健且安全 (Cycle 2)、降解效率最优化 (Cycle 3) 且具备空间感知能力 (Cycle 4)</strong> 的完美干预系统。
+            </div>
+            <div style="display: flex; justify-content: center; margin: 2rem 0;">
+              <img src="项目设计_e.png" alt="图 E：空间特异性机制图" class="content-img" style="max-width: 900px;">
+            </div>
+            <div class="image-caption" style="text-align: center;">图 E | 空间特异性机制图 Spatial Biocontainment</div>
+          </div>
+        </div>
+
+        <div id="section6" class="text-content-section">
+          <div class="text-box-container">
+            <div class="section-title">参考文献 (References)</div>
+            <div class="text-content references-list">
+              <ol>
+                <li>Newton, S. M., et al. (1995). <em>Studies of the anaerobically induced promoter pnirB and the improved expression of bacterial antigens.</em> Research in Microbiology, 146(3), 193-202. (PMID: 7569314)</li>
+                <li>Luke, J. J., et al. (2023). <em>Phase I Study of SYNB1891, an Engineered E. coli Nissle Strain… in Advanced Malignancies.</em> Clinical Cancer Research, 29(13), 2435-2444. (PMID: 37227176)</li>
+                <li>Wu, D., et al. (2023). <em>Escherichia coli Nissle 1917-driven microrobots for effective tumor targeted drug delivery and tumor regression.</em> Acta Biomaterialia, 169, 477-488. (PMID: 37532134)</li>
+                <li>Ytterberg, A. J., et al. (2019). <em>Posttranslational Targeting of a Recombinant Protein Promotes Its Efficient Secretion into the Escherichia coli Periplasm.</em> Applied and Environmental Microbiology, 85(13). (PMID: 31003980)</li>
+                <li>Fu, J., et al. (2024). <em>Targeted expression of the immunomodulatory peptide Scy by engineered Escherichia coli Nissle 1917…</em> Frontiers in Immunology. (PMID: 41766863)</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-wrapper">
+          <div class="footer-content">
+            <div class="footer-nav">
+              <div class="footer-nav-row">
+                <button class="footer-btn" onclick="window.location.href='index.html'">首页</button>
+                <button class="footer-btn" onclick="window.location.href='description.html'">项目介绍</button>
+                <button class="footer-btn" onclick="window.location.href='engineering.html'">项目设计</button>
+                <button class="footer-btn" onclick="window.location.href='result.html'">线路与元件</button>
+                <button class="footer-btn" onclick="window.location.href='experiment.html'">实验设计</button>
+                <button class="footer-btn" onclick="window.location.href='hp.html'">人类实践</button>
+                <button class="footer-btn" onclick="window.location.href='personal.html'">成员介绍</button>
+                <button class="footer-btn" onclick="window.location.href='model.html'">建模</button>
+                <button class="footer-btn" onclick="window.location.href='contact.html'">联系我们</button>
+              </div>
+            </div>
+            <img src="logo.png" alt="Logo" class="seaguy-logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
